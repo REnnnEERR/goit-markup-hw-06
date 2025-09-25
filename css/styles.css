@@ -92,6 +92,7 @@ footer a,
     background-color: #2E2F42;
     display: flex;
 
+
 }
 
 .top-menu {
@@ -320,13 +321,13 @@ footer a,
 }
 
 .team-list {
-    display: flex;
+    display: block;
     gap: 24px;
 }
 
 .team-photo {
     background-color: #FFFFFF;
-    width: calc((100% - 72px) / 4);
+    width: 264px;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 
@@ -334,6 +335,8 @@ footer a,
 
 .team-name-container {
     padding: 32px 0;
+    width: 100%;
+    margin-bottom: 72px;
 }
 
 .team-name {
@@ -359,6 +362,7 @@ footer a,
     display: flex;
     gap: 16px;
     justify-content: center;
+    margin-bottom: 72px;
 }
 
 .svg-sosial-icon {
@@ -486,6 +490,10 @@ footer a,
     color: #4d5ae5;
     display: inline-block;
     margin-bottom: 16px;
+    width: 100%;
+    margin-left: auto;
+    text-align: center;
+
 
 }
 
@@ -493,7 +501,8 @@ footer a,
     color: #F4F4FD;
     letter-spacing: 0.02em;
     line-height: 1.5;
-    max-width: 264px;
+    width: 288px;
+    margin-bottom: 72px;
 }
 
 .logo-studio {
@@ -529,11 +538,13 @@ img {
     letter-spacing: 0.02em;
     margin-bottom: 16px;
     color: #ffff;
+    text-align: center;
 
 }
 
 .container-footer {
-    margin-right: 120px;
+
+    /* width: 100%; */
 }
 
 .footer-position {
@@ -574,7 +585,7 @@ img {
 }
 
 .container-footer-position {
-    display: flex;
+    display: block;
     align-items: baseline;
 }
 
@@ -585,12 +596,14 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #ffff;
+    text-align: center;
 }
 
 .footer-subscribe-form {
     display: flex;
     gap: 24px;
-
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-subscribe-input {
@@ -635,9 +648,9 @@ img {
     fill: #ffffff;
 }
 
-.footer-subscribe {
+/* .footer-subscribe {
     margin-left: 80px;
-}
+} */
 
 .overlay {
     padding: 32px 16px;
@@ -889,6 +902,8 @@ img {
 
     }
 
+    /* ------блок бенефітс------ */
+
     .benefits-list {
         /* width: 736px; */
         display: flex;
@@ -898,11 +913,93 @@ img {
 
     .benefits-list-container {
         width: calc((100% - 1 * 24px) / 2);
+
+    }
+
+    .benefits-list-container:not(:last-child) {
+        margin-bottom: 0;
     }
 
     .benefits-title {
         text-align: left;
     }
+
+    /* .footer-subscribe-form {
+        display: flex;
+        gap: 24px;
+
+    } */
+    .footer-subscribe {
+        margin-left: 80px;
+    }
+
+    .footer-subscribe-text {
+        text-align: left;
+    }
+
+    .footer-sosial {
+        text-align: left;
+    }
+
+    .text-down {
+        max-width: 264px;
+    }
+
+    .container-footer {
+        margin-right: 120px;
+    }
+
+
+    /* ------блок бенефітс------ */
+    /* -----блок команда----- */
+
+    .team-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .container-team {
+        width: 582px;
+    }
+
+    .team-photo {
+        width: calc((100% - 1 * 24px) / 2);
+        margin-bottom: 62px;
+    }
+
+    .team-name-container {
+        margin-bottom: 62px;
+    }
+
+    /* -----блок команда----- */
+    /* -----блок футер----- */
+    .container-footer {
+        width: 264px;
+        margin-right: 24px;
+        margin-left: 108px;
+
+
+    }
+
+    .footer-subscribe {
+        margin-left: 108px;
+    }
+
+    .container-footer-position {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+
+    .footer-subscribe-form {
+        flex-direction: row;
+        align-items: center;
+    }
+
+
+
+
+    /* -----блок футер----- */
 }
 
 @media screen and (min-width: 1158px) {
@@ -911,12 +1008,16 @@ img {
 
     }
 
+    /* ------блок бенефітс------ */
+
     .benefits-list-imeg {
         display: flex;
     }
 
     .benefits-list-container {
         width: calc((100% - 3 * 24px) / 4);
+
+
     }
 
     .benefits-title {
@@ -924,4 +1025,55 @@ img {
         font-size: 20px;
         line-height: 24px;
     }
+
+    /* ------блок бенефітс------ */
+
+    /* -----блок команда----- */
+
+    .team-photo {
+        width: calc((100% - 3 * 24px) / 4);
+    }
+
+    .team-name-container {
+
+        margin-bottom: 0px;
+    }
+
+    /* -----блок команда----- */
+    /* -----блок футер----- */
+    .footer-subscribe-form {
+        flex-direction: nowrap;
+        align-items: center;
+    }
+
+    .footer-subscribe-form {
+        display: block;
+
+    }
+
+    .logo-footer {
+        text-align: left;
+
+    }
+
+    .container-footer {
+
+        margin-right: 120px;
+    }
+
+    .footer-subscribe-form {
+        display: flex;
+
+    }
+
+    .container-footer-position {
+        flex-wrap: nowrap;
+        margin: 0;
+    }
+
+    .footer-subscribe {
+        margin-left: 80px;
+    }
+
+    /* -----блок футер----- */
 }
