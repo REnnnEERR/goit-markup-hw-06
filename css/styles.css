@@ -87,6 +87,11 @@ footer a,
     color: #F4F4FD;
 }
 
+.menu-open .SVG-icon {
+    width: 24px;
+    height: 24px;
+}
+
 .down,
 .hero-banner {
     background-color: #2E2F42;
@@ -100,7 +105,7 @@ footer a,
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.02em;
-    display: flex;
+    display: none;
     gap: 40px;
 }
 
@@ -132,6 +137,7 @@ footer a,
 }
 
 .contacts {
+    display: none;
     font-style: normal;
     font-Weight: 400;
     font-size: 16px;
@@ -149,7 +155,19 @@ footer a,
     gap: 40px;
 }
 
-.hero-banner {
+.menu-open {
+    background: none;
+    border: none;
+    padding: 0;
+    padding: 16px;
+    /* cursor: pointer; */
+
+}
+
+/* --------блок хедер-------- */
+/* ------блок хіробанер------ */
+
+.SVG-icon .hero-banner {
     padding: 188px 0;
     background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/hero-banner.jpg');
     background-size: cover;
@@ -237,7 +255,7 @@ footer a,
 }
 
 .benefits {
-    padding: 120px 0;
+    padding: 96px 0;
 }
 
 .benefits-list-imeg {
@@ -343,12 +361,6 @@ footer a,
     padding: 32px 0;
     width: 100%;
 }
-
-.team-photo:not {
-    margin-top: 72px;
-}
-
-
 
 .team-name {
     text-align: center;
@@ -929,6 +941,24 @@ img {
 
     }
 
+    /* --------блок хедер-------- */
+    .menu-open {
+        display: none;
+    }
+
+    .contacts {
+        display: block;
+    }
+
+    .top-menu {
+        display: flex;
+    }
+
+    .contacts-list {
+        display: block;
+    }
+
+    /* --------блок хедер-------- */
     /* ------блок бенефітс------ */
 
     .benefits-list {
@@ -951,11 +981,6 @@ img {
         text-align: left;
     }
 
-    /* .footer-subscribe-form {
-        display: flex;
-        gap: 24px;
-
-    } */
     .footer-subscribe {
         margin-left: 80px;
     }
@@ -977,12 +1002,15 @@ img {
     }
 
 
+
     /* ------блок бенефітс------ */
-    /* -----блок команда----- */
+    /* ------блок команда------ */
 
     .team-list {
         display: flex;
         flex-wrap: wrap;
+        row-gap: 64px;
+
     }
 
     .container-team {
@@ -991,19 +1019,11 @@ img {
 
     .team-photo {
         width: calc((100% - 1 * 24px) / 2);
-        margin-bottom: 62px;
+        margin: 0;
+
     }
 
-    .team-name-container {
-        margin-bottom: 62px;
-    }
-
-    .team-name-container:not(:last-child) {
-        margin-bottom: 0;
-    }
-
-
-    /* -----блок команда----- */
+    /* ------блок команда------ */
     /* -----блок портфоліо----- */
 
     .portfolio-list {
@@ -1019,7 +1039,7 @@ img {
     }
 
     /* -----блок портфоліо----- */
-    /* -----блок футер----- */
+    /* -------блок футер------- */
     .container-footer {
         width: 264px;
         margin-right: 24px;
@@ -1046,7 +1066,7 @@ img {
 
 
 
-    /* -----блок футер----- */
+    /* -------блок футер------- */
 }
 
 @media screen and (min-width: 1158px) {
@@ -1054,6 +1074,13 @@ img {
         width: 1158px;
 
     }
+
+    /* --------блок хедер-------- */
+    .contacts-list {
+        display: flex;
+    }
+
+    /* --------блок хедер-------- */
 
     /* ------блок бенефітс------ */
 
@@ -1071,6 +1098,10 @@ img {
         font-weight: 500;
         font-size: 20px;
         line-height: 24px;
+    }
+
+    .benefits {
+        padding: 120px;
     }
 
     /* ------блок бенефітс------ */
