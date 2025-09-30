@@ -104,11 +104,18 @@ footer a,
 .hero-banner {
     background-color: #2E2F42;
     display: flex;
+
+
+}
+
+.hero-banner {
+
     background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/hero-banner-mob.jpg');
     background-size: cover;
     margin: 0 auto;
 
 }
+
 
 .hero-banner-container {
     width: 320px;
