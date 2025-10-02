@@ -103,23 +103,28 @@ footer a,
 .down,
 .hero-banner {
     background-color: #2E2F42;
-    display: flex;
+
 
 
 }
 
 .hero-banner {
 
-    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/hero-banner-mob.jpg');
+    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/hero-banner-mob-x1.jpg');
     background-size: cover;
     margin: 0 auto;
+    padding: 72px 0;
 
+    @media screen and (min-resolution: 2x),
+    (-webkit-min-device-pixel-ratio: 2) {
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/hero-banner-mob-x2.jpg');
+
+    }
 }
 
 
 .hero-banner-container {
-    width: 320px;
-    height: 432px;
+    max-width: 320px;
 }
 
 .top-menu {
@@ -192,7 +197,7 @@ footer a,
 
 .SVG-icon .hero-banner {
     padding: 188px 0;
-    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/hero-banner-mob.jpg');
+    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/hero-banner-mob-x1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     max-width: 1440px;
@@ -200,6 +205,11 @@ footer a,
     margin: 0 auto;
     background-position: center;
 
+    @media screen and (min-resolution: 2x),
+    (-webkit-min-device-pixel-ratio: 2) {
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/hero-banner-mob-x2.jpg');
+
+    }
 }
 
 .hero-banner-name {
@@ -214,7 +224,6 @@ footer a,
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 72px;
-    margin-top: 72px;
 
 }
 
@@ -264,10 +273,12 @@ footer a,
 }
 
 .benefits-title {
-    font-weight: 500;
+    font-weight: 700;
     font-size: 36px;
     line-height: 40px;
     letter-spacing: 0.02em;
+    margin-bottom: 8px;
+    text-align: center;
 }
 
 .benefits-text,
@@ -277,6 +288,10 @@ footer a,
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.02em;
+}
+
+.benefits-text {
+    font-weight: 500;
 }
 
 .benefits {
@@ -306,11 +321,6 @@ footer a,
 
 }
 
-.benefits-title {
-    margin-bottom: 8px;
-    text-align: center;
-}
-
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -326,7 +336,7 @@ footer a,
 
 .benefits-list {
     display: block;
-    gap: 24px;
+
 }
 
 
@@ -364,7 +374,9 @@ footer a,
 }
 
 .team-list {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 24px;
     row-gap: 20px;
 }
@@ -410,12 +422,9 @@ footer a,
     display: flex;
     gap: 16px;
     justify-content: center;
-    margin-bottom: 72px;
 }
 
 .svg-sosial-icon {
-    width: 16px;
-    height: 16px;
     fill: #f4f4fd;
 }
 
@@ -447,9 +456,7 @@ footer a,
     row-gap: 48px;
 }
 
-.portfolio-list-text:not(:last-child) {
-    margin-bottom: 48px;
-}
+
 
 .portfolio-list-text {
     width: 288px;
@@ -461,7 +468,7 @@ footer a,
 }
 
 .portfolio-list-text picture img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     display: block;
 
@@ -556,7 +563,6 @@ portfolio-list-text:last-child {
     margin-bottom: 16px;
     width: 100%;
     margin-left: auto;
-    text-align: center;
 
 
 }
@@ -566,7 +572,7 @@ portfolio-list-text:last-child {
     letter-spacing: 0.02em;
     line-height: 1.5;
     width: 288px;
-    margin-bottom: 72px;
+
 }
 
 .logo-studio {
@@ -607,8 +613,13 @@ img {
 }
 
 .container-footer {
+    margin-bottom: 72px;
 
     /* width: 100%; */
+}
+
+.footer-sosial-media {
+    margin-bottom: 72px;
 }
 
 .footer-position {
@@ -671,7 +682,7 @@ img {
 }
 
 .footer-subscribe-input {
-    width: 264px;
+    width: 288px;
     height: 40px;
     border: 1px solid #ffffff;
     background-color: transparent;
@@ -712,9 +723,9 @@ img {
     fill: #ffffff;
 }
 
-/* .footer-subscribe {
-    margin-left: 80px;
-} */
+.footer-subscribe {
+    /* margin-bottom: 72px; */
+}
 
 /* ------блок оверлей вікон------ */
 /* ------блок оверлей вікно ПК------ */
@@ -734,7 +745,7 @@ img {
     z-index: 999;
 
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    opacity: 10;
+    opacity: 0;
     visibility: hidden;
     pointer-events: none;
 }
@@ -780,7 +791,7 @@ img {
     opacity: 0;
     /* visibility: hidden;
     pointer-events: none; */
-    opacity: 10;
+    opacity: 0;
     visibility: hidden;
     pointer-events: none;
 }
@@ -800,6 +811,9 @@ img {
     position: absolute;
 
     padding: 72px 24px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .overlay-button-menu {
@@ -848,9 +862,10 @@ img {
     display: block;
     row-gap: 48px;
     column-gap: 24px;
-
-
+    color: rgba(46, 47, 66, 1);
 }
+
+
 
 .top-menu-list {
     display: flex;
@@ -859,9 +874,6 @@ img {
 
 }
 
-.space-menu-mob {
-    margin: 200px 0 0 0;
-}
 
 .sosial-imeg-menu {
     display: flex;
@@ -892,7 +904,9 @@ img {
     font-size: 20px;
     line-height: 24px;
     letter-spacing: 0.02em;
+    color: rgba(67, 68, 85, 1);
 }
+
 
 .contacts-mob :hover {
     color: #404BBF;
@@ -912,11 +926,7 @@ img {
     text-decoration-color: #404BBF;
 }
 
-/* ------блок оверлей моб------ */
 
-
-
-/* ------блок оверлей моб------ */
 
 
 /* ------блок оверлей вікно меню моб------ */
@@ -1156,20 +1166,32 @@ img {
         display: block;
     }
 
+    .contacts-header {
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.04em;
+    }
+
     /* --------блок хедер-------- */
     /* ------блок хіробанер------ */
     .hero-banner {
 
-        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/hero-banner-tab.jpg');
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/hero-banner-tab-x1.jpg');
+
+        @media screen and (min-resolution: 2x),
+        (-webkit-min-device-pixel-ratio: 2) {
+            background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/hero-banner-tab-x2.jpg');
+
+        }
     }
 
     .hero-banner-container {
-        width: 768px;
+        max-width: 768px;
+        padding: 112px 0;
     }
 
     .hero-banner-name {
         font-size: 56px;
-        margin-top: 112px;
         max-width: 496px;
         margin-bottom: 36px;
     }
@@ -1181,6 +1203,7 @@ img {
         /* width: 736px; */
         display: flex;
         flex-wrap: wrap;
+        gap: 72px 24px;
 
 
     }
@@ -1198,9 +1221,6 @@ img {
         text-align: left;
     }
 
-    .footer-subscribe {
-        margin-left: 80px;
-    }
 
     .footer-subscribe-text {
         text-align: left;
@@ -1227,6 +1247,7 @@ img {
         display: flex;
         flex-wrap: wrap;
         row-gap: 64px;
+        flex-direction: row;
 
     }
 
@@ -1251,7 +1272,7 @@ img {
 
     .portfolio-list-text {
         margin-bottom: 0;
-        width: calc((100% - 48px) / 2);
+        width: calc((100% - 24px) / 2);
 
     }
 
@@ -1260,19 +1281,15 @@ img {
     .container-footer {
         width: 264px;
         margin-right: 24px;
-        margin-left: 108px;
 
 
-    }
-
-    .footer-subscribe {
-        margin-left: 108px;
     }
 
     .container-footer-position {
         display: flex;
         flex-wrap: wrap;
         justify-content: start;
+        width: 584px;
     }
 
     .footer-subscribe-form {
@@ -1280,7 +1297,9 @@ img {
         align-items: center;
     }
 
-
+    ..footer-subscribe-input {
+        width: 264px;
+    }
 
 
     /* -------блок футер------- */
@@ -1306,22 +1325,32 @@ img {
         display: flex;
     }
 
+    .contacts-header {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.04em;
+    }
+
     /* --------блок хедер-------- */
 
     /* ------блок хіробанер------ */
     .hero-banner {
 
-        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/hero-banner.jpg');
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/hero-banner-x1.jpg');
+
+        @media screen and (min-resolution: 2x),
+        (-webkit-min-device-pixel-ratio: 2) {
+            background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/hero-banner-x2.jpg');
+
+        }
     }
 
     .hero-banner-container {
-        width: 1440px;
-        height: 600px;
+        max-width: 1440px;
+        padding: 188px 0;
     }
 
     .hero-banner-name {
-        margin-top: 188px;
-
         margin-bottom: 48px;
         max-width: 496px;
     }
@@ -1347,7 +1376,7 @@ img {
     }
 
     .benefits {
-        padding: 120px;
+        padding: 120px 0;
     }
 
     /* ------блок бенефітс------ */
@@ -1396,6 +1425,11 @@ img {
     .container-footer {
 
         margin-right: 120px;
+        margin-bottom: 0;
+    }
+
+    .footer-sosial-media {
+        margin-bottom: 0;
     }
 
     .footer-subscribe-form {
