@@ -563,6 +563,7 @@ portfolio-list-text:last-child {
     margin-bottom: 16px;
     width: 100%;
     margin-left: auto;
+    text-align: center;
 
 
 }
@@ -1297,8 +1298,13 @@ img {
         align-items: center;
     }
 
-    ..footer-subscribe-input {
+    .footer-subscribe-input {
         width: 264px;
+    }
+
+    .logo-footer {
+        text-align: left;
+
     }
 
 
@@ -1417,10 +1423,7 @@ img {
 
     }
 
-    .logo-footer {
-        text-align: left;
 
-    }
 
     .container-footer {
 
