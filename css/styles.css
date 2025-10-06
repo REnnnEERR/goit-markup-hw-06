@@ -450,7 +450,7 @@ footer a,
 }
 
 .portfolio-list {
-    display: block;
+    display: flex;
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 48px;
@@ -769,7 +769,7 @@ img {
     transform: translate(-50%, -50%);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 72px 24px 24px 24px;
+    padding: 72px 16px 24px 16px;
 }
 
 /* ------блок оверлей вікно ПК------ */
@@ -1140,6 +1140,15 @@ img {
 .overly-form-container:nth-of-type(5) {
     margin-bottom: 24px;
 }
+
+.top-mob-first {
+    color: rgba(64, 75, 191, 1);
+}
+
+.contacts-mob-tel {
+    color: rgba(77, 90, 229, 1)
+}
+
 
 
 /* --------Медіазапити-------- */
